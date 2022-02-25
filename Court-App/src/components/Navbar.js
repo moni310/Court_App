@@ -21,7 +21,7 @@ const Navbar = () =>{
                         </li>
 
                         <li>
-                            <a href="#">CNR No.</a>
+                            <a href="/search">CNR No.</a>
                         </li>
 
                         <li>

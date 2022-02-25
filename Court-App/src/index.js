@@ -14,6 +14,7 @@ import Case from './components/Case';
 import Normel from './components/Normel';
 import Henious from './components/Henious';
 import Form from './components/Form';
+import Search from './components/Search';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -25,6 +26,8 @@ ReactDOM.render(
       <Route path="/Normel" element={<Normel/>}></Route>
       <Route path="/Henious" element={<Henious/>}></Route>
       <Route path="/Form" element={<Form/>}></Route>
+      <Route path="/search" element={<Search/>}></Route>
+
     </Routes>
   </BrowserRouter>,
 
