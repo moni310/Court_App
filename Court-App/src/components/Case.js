@@ -4,7 +4,7 @@ function Case (){
             <div className="menu-link">
                 <ul>
                         <li>
-                            <a href="/normel">Normel Case</a>
+                            <a href="/normal">Normal Case</a>
                         </li>
 
                         <li>

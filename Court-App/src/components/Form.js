@@ -9,7 +9,7 @@ function Form(){
   // States for registration
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [casetype, setCase] = useState('');
   const [court, setCourt] = useState('');
   const [police, setPolice] = useState('');
   const [fir, setFir] = useState('');
@@ -40,8 +40,8 @@ function Form(){
   };
 
   // Handling the password change
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
+  const handleCaseType = (e) => {
+    setCase(e.target.value);
     setSubmitted(false);
   };
 
@@ -84,13 +84,14 @@ function Form(){
     setSubmitted(false);
   };
 
+
   
 
   // Handling the form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log("yyyyyyyy")
-    if (name === '' || email === '' || password === '') {
+    if (name === '' || email === '') {
     
       
       setError(true);
@@ -99,7 +100,7 @@ function Form(){
       const data = JSON.stringify({
         "Name": name,
         "Nameofcourt": court,
-        "Typeofcase": "Normal",
+        "Typeofcase": casetype,
         "Nameofpolicestation": police,
         "DateofFIR": fir,
         "Lastdateofhearing": lastDate,
@@ -184,9 +185,9 @@ function Form(){
         <input onChange={handleEmail} className="input"
           value={email} type="email" />
  
-        <label className="label">Password</label>
-        <input onChange={handlePassword} className="input"
-          value={password} type="password" />
+        <label className="label">Case Type</label>
+        <input onChange={handleCaseType} className="input"
+          value={casetype} type="text" />
 
 		<label className="label">Name Of Court</label>
         <input onChange={handleCourt} className="input"
@@ -207,6 +208,8 @@ function Form(){
 		<label className="label">Present Date Of Hearing</label>
         <input onChange={handlePresentDate} className="input"
           value={presentDate} type="date" />
+    
+    
 		</center>
         <center>
         <button onClick={handleSubmit} className="btn" type="submit">

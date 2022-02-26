@@ -11,7 +11,7 @@ import {
 import About from './components/About';
 import Home from './components/Home';
 import Case from './components/Case';
-import Normel from './components/Normel';
+import Normal from './components/Normal';
 import Henious from './components/Henious';
 import Form from './components/Form';
 import Search from './components/Search';
@@ -23,7 +23,7 @@ ReactDOM.render(
       <Route path="/" element={<Home />}></Route>
       <Route path="/about" element={<About/>}></Route>
       <Route path="/Case" element={<Case/>}></Route>
-      <Route path="/Normel" element={<Normel/>}></Route>
+      <Route path="/Normal" element={<Normal/>}></Route>
       <Route path="/Henious" element={<Henious/>}></Route>
       <Route path="/Form" element={<Form/>}></Route>
       <Route path="/search" element={<Search/>}></Route>

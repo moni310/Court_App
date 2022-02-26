@@ -59,6 +59,7 @@ app.get("/searchbaar/:id", async (req, res) => {
 
   try {
     const User = await userModel.findOne({id:req.params.id});
+
     if (!User) res.status(404).send({"message":"Not found this id"});
     res.status(200).json(User);
 
@@ -67,5 +68,18 @@ app.get("/searchbaar/:id", async (req, res) => {
   }
 });
 
+
+
+app.get("/Casetype/:id", async (req, res) => {
+  try {
+    const User = await userModel.findOne({id:req.params.id});
+
+    if (!User) res.status(404).send({"message":"Not found this id"});
+    res.status(200).json(User);
+
+} catch (error) {
+    return res.status(500).send({"message":"server error"});
+  }
+});
 
 module.exports = app;

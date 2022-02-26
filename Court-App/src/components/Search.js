@@ -5,14 +5,14 @@ import "./navbar.css";
 function Search() {
     const [cnr, setCnr] = useState({});
 
-    const [id,setId] = useState('');
+    const [_id,setId] = useState('');
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log("llllll")
     
         var config = {
             method: 'get',
-            url: `http://localhost:4000/searchbaar/${id}`,
+            url: `http://localhost:4000/searchbaar/${_id}`,
         };
         axios(config)
             .then(function (response) {
@@ -24,8 +24,7 @@ function Search() {
             .catch(function (error) {
                 console.log(error);
             });
-        // setSubmitted(true);
-        // setError(false);
+        
     };
 
     return (
@@ -46,10 +45,11 @@ function Search() {
                     <h3>Submit</h3>
                 </button>
             </form>
-            <h4> {cnr && cnr.Name}</h4>
-            <h4> {cnr && cnr.Nameofcourt}</h4>
-            <h4> {cnr && cnr.Nameofpolicestation}</h4>
-            <h4> {cnr && cnr.Nextdateofhearing}</h4>
+            <h4> Name : {cnr && cnr.Name}</h4>
+            <h4> Court name : {cnr && cnr.Nameofcourt}</h4>
+            <h4> Police Station : {cnr && cnr.Nameofpolicestation}</h4>
+            <h4> Next date : {cnr && cnr.Nextdateofhearing}</h4>
+            <h4> Last date : {cnr && cnr.Lastdateofhearing}</h4>
         </div>
     );
 }

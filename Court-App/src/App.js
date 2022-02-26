@@ -9,16 +9,5 @@ const App = () =>{
 };
 
 
-// function App () {
-//     return(
-    
-//       <BrowserRouter>
-//       <div className="App">
-//           <Route exact path="/about" component={About}/>
-//       </div>
-
-// </BrowserRouter>
-// )
-// }
 
 export default App;

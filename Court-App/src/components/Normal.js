@@ -1,6 +1,6 @@
 // this component for about page
 import React, { Component } from 'react';
-function Normel (){
+function Normal (){
         return(
             <div className="menu-link">
                 <ul>
@@ -24,4 +24,4 @@ function Normel (){
             </div>
         );
     }
-export default Normel;
+export default Normal;
