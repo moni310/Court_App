@@ -58,8 +58,9 @@ app.delete("/users/:id", async (request, response) => {
 app.get("/searchbaar/:id", async (req, res) => {
 
   try {
-    const User = await userModel.findOne({id:req.params.id});
-
+    // console.log(req.params.id)
+    const User = await userModel.findOne({_id:req.params.id});
+    // console.log(User)
     if (!User) res.status(404).send({"message":"Not found this id"});
     res.status(200).json(User);
 
